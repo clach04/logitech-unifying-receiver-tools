@@ -3,7 +3,9 @@
 # vim:ts=4:sw=4:softtabstop=4:smarttab:expandtab
 #
 
-#import pyusb stuff
+#import pyusb stuff appears to require pyusb 1.0
+# available from https://github.com/walac/pyusb
+# which in turn requires libusb (either 0.1 or 1.0)
 import usb.core
 import usb.util
 #lets us run system commands
