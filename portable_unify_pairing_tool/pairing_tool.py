@@ -12,11 +12,10 @@ import time
 # clone that contains version attribute
 #   https://github.com/clach04/pyusb/
 import usb
-import usb.meta
 import usb.core
 
 
-assert usb.meta.version_tuple >= (1, 0, 0)
+assert usb.version_info >= (1, 0, 0)
 
 
 USB_VENDOR_ID_LOGITECH = 0x046d
