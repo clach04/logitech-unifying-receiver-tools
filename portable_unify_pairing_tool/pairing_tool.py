@@ -2,6 +2,24 @@
 # -*- coding: us-ascii -*-
 # vim:ts=4:sw=4:softtabstop=4:smarttab:expandtab
 #
+"""Enable pairing mode on a Logitech Unifying (USB) reciever.
+
+ *  Ensure new (target) usb device is plugged in.
+ *  Ensure old (current) usb device is unplugged.
+ *  Device (mouse, keyboard, gamepad, etc.) should be powered off.
+
+Unix/Linux Usage:
+
+    sudo python pairing_tool.py
+
+Or if using pyusb that is not installed:
+
+    sudo env PYTHONPATH=/path/to/python/usb/pyusb/trunk  python ./pairing_tool.py
+
+Then turn on device, there is a 5 second window between running the tool
+and powering on the device.
+
+"""
 
 import os
 import sys
@@ -15,7 +33,9 @@ import usb
 import usb.core
 
 
-assert usb.version_info >= (1, 0, 0)
+CHECK_USB_MODLE_VERSION = True
+if CHECK_USB_MODLE_VERSION:
+    assert usb.version_info >= (1, 0, 0)
 
 
 USB_VENDOR_ID_LOGITECH = 0x046d
