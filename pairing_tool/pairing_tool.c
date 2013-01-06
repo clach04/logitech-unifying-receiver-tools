@@ -35,6 +35,7 @@ int main(int argc, char **argv)
 	if (argc == 1) {
 		errno = EINVAL;
 		perror("No hidraw device given");
+		printf("usage:\n\t<program-name> /dev/hidraw<X>\n\twhere <X> is a number\n");
 		return 1;
 	}
 	/* Open the Device with non-blocking reads. */
