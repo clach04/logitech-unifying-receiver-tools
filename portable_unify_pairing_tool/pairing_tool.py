@@ -2,11 +2,11 @@
 # -*- coding: us-ascii -*-
 # vim:ts=4:sw=4:softtabstop=4:smarttab:expandtab
 #
-"""Enable pairing mode on a Logitech Unifying (USB) reciever.
+"""Enable pairing mode on a Logitech Unifying (USB) receiver.
 
  *  Ensure new (target) usb device is plugged in.
  *  Ensure old (current) usb device is unplugged.
- *  Device (mouse, keyboard, gamepad, etc.) should be powered off.
+ *  Device (mouse, keyboard, game pad, etc.) should be powered off.
 
 Unix/Linux Usage:
 
@@ -49,13 +49,13 @@ def start_pairing_mode(dev):
     Pair mode is enabled for 5 secs and is handled entirely by the
     hardware firmware.
     Once pairing mode is enabled turn on Logitech device to pair.
-    
+
         dev is the pyusb device to use
     """
     # Sanity checks, should be real if statements rather than asserts..
     assert dev.idVendor == USB_VENDOR_ID_LOGITECH
     assert dev.idProduct == USB_DEVICE_ID_UNIFYING_RECEIVER
-    
+
     # Send the first control transfer
     dev.ctrl_transfer(0x21, 0x09, 0x0210, 0x0002, UNIFY_PAIR_MESSAGE)
 
@@ -66,7 +66,7 @@ def start_pairing_mode(dev):
 def main(argv=None):
     if argv is None:
         argv = sys.argv
-    
+
     # find device logitech unifying receiver 046d:c52b
     dev = usb.core.find(idVendor=USB_VENDOR_ID_LOGITECH, idProduct=USB_DEVICE_ID_UNIFYING_RECEIVER)
 
@@ -95,17 +95,17 @@ def main(argv=None):
         # NOTE no backend check below, just platform
         if self._platform != 'nt':
             raise
-            
+
     print 'about to pair'
     start_pairing_mode(dev)
     print 'pairing stops in 5 seconds, power on device to pair'
     print '    if device already on, power off/on'
     time.sleep(5)
     print 'pairing mode ENDED'
-    
+
     """DO NOT REATTACH! End up with
-    #dev.attach_kernel_driver(interface)  # reattach 
-    
+    #dev.attach_kernel_driver(interface)  # reattach
+
 Traceback (most recent call last):
   File "./logitech_find.py", line 112, in <module>
     sys.exit(main())
