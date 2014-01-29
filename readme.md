@@ -14,7 +14,7 @@ Portable, pure Python script that relies only on PyUSB.
 
 This would not exist if it where not for pairing_tool and PyUnify.
 
-Also consider http://pwr.github.io/Solaar/ which has more requirements and
+Also consider [Solaar](http://pwr.github.io/Solaar/) which has more requirements and
 dependencies but it supports more advanced operations like viewing paired
 devices and unpairing.
 
