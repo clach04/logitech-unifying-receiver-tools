@@ -12,6 +12,10 @@ Ensure PyUSB version 1.0.0 or greater is installed and available:
  * Ensure old (current) usb unifying receiver device is unplugged.
  * Device (mouse, keyboard, gamepad, etc.) should be powered off.
 
+NOTE the examples below are running as root, for example rules that
+remove the need to run as root see Peter Wu's rule file
+https://git.lekensteyn.nl/ltunify/tree/udev/42-logitech-unify-permissions.rules
+
 Unix/Linux Usage:
 
     sudo python pairing_tool.py
