@@ -12,6 +12,12 @@ Logitech Unifying receivers and devices.
 
 Portable, pure Python script that relies only on PyUSB.
 
+This would not exist if it where not for pairing_tool and PyUnify.
+
+Also consider http://pwr.github.io/Solaar/ which has more requirements and
+dependencies but it supports more advanced operations like viewing paired
+devices and unpairing.
+
 ## pairing_tool
 
 Linux only - command line tool written in C (so it needs some compiling).
@@ -19,3 +25,4 @@ Linux only - command line tool written in C (so it needs some compiling).
 ## PyUnify
 
 Linux only - Python script.
+
