@@ -5,16 +5,16 @@ wireless mice and keyboards (etc.). Allows Linux to pair Logitech
 Unifying Receivers with new devices. Should work with Mac OSX and 
 Windows too. Check out the 
 [wiki here](https://bitbucket.org/clach04/logitech-unifying-receiver-tools/wiki/Home)
-Basically pools together all the tools and notes on tools for 
+Basically pools together all the original tools and notes for 
 Logitech Unifying receivers and devices.
 
 ## portable_unify_pairing_tool
 
 Portable, pure Python script that relies only on PyUSB.
 
-This would not exist if it where not for pairing_tool and PyUnify.
+This would not exist if it where not for the original pairing_tool and PyUnify.
 
-Also consider [Solaar](http://pwr.github.io/Solaar/) which has more requirements and
+Also consider the more recent [Solaar](http://pwr.github.io/Solaar/) which has more requirements and
 dependencies but it supports more advanced operations like viewing paired
 devices and unpairing.
 
