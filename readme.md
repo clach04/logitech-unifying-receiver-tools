@@ -15,6 +15,7 @@ Portable, pure Python script that relies only on PyUSB.
 This would not exist if it where not for the original pairing_tool and PyUnify.
 
 Also consider:
+
   * Linux only, but mmore advanced(/recent) [ltunify](https://lekensteyn.nl/logitech-unifying.html#ltunify)
   * the more recent Python based [Solaar](http://pwr.github.io/Solaar/) which has more requirements and
 dependencies but it supports more advanced operations like viewing paired
@@ -27,4 +28,3 @@ Linux only - command line tool written in C (so it needs some compiling).
 ## PyUnify
 
 Linux only - Python script.
-
